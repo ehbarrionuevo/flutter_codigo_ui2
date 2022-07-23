@@ -44,6 +44,7 @@ class HomePage extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
+                      Icon(Icons.add,),
                     ],
                   ),
                 ],
