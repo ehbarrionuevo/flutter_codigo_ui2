@@ -97,20 +97,17 @@ class HomePage extends StatelessWidget {
                   child: Container(
                     height: 100,
                     width: double.infinity,
-                    color: Colors.red,
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.6),
+                      borderRadius: BorderRadius.only(
+                        bottomRight: Radius.circular(46.0),
+                        topLeft: Radius.circular(20.0),
+                      ),
+                    ),
                     child: Text("Hola"),
                   ),
                 ),
-                // Positioned(
-                //   right: 0,
-                //   bottom: 0,
-                //   child: Container(
-                //     color: Colors.white,
-                //     child: Text(
-                //       "Holaaaaaaaa",
-                //     ),
-                //   ),
-                // ),
+
               ],
             ),
           ),
