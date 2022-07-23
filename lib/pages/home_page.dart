@@ -201,6 +201,25 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
+                const SizedBox(
+                  height: 14.0,
+                ),
+                Row(
+                  children: [
+                    Container(
+                      height: 160,
+                      width: 240,
+                      decoration: BoxDecoration(
+                        color: Colors.red,
+                        borderRadius: BorderRadius.circular(14.0),
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: NetworkImage("https://world-traveled.com/wp-content/uploads/2021/01/219733347-kopie_1610117841-1040x690.jpg",),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
