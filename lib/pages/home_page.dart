@@ -222,7 +222,7 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(
-                    height: 14.0,
+                    height: 30.0,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -259,6 +259,47 @@ class HomePage extends StatelessWidget {
                         ItemCategoryWidget(),
                       ],
                     ),
+                  ),
+                  const SizedBox(
+                    height: 30.0,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Popular places",
+                        style: TextStyle(
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      Text(
+                        "SEE ALL",
+                        style: TextStyle(
+                          fontSize: 15.0,
+                          color: Color(0xff3E88E1),
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 14.0,
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        ItemSliderWidget(),
+                        ItemSliderWidget(),
+                        ItemSliderWidget(),
+                        ItemSliderWidget(),
+                        ItemSliderWidget(),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 14.0,
                   ),
                 ],
               ),
