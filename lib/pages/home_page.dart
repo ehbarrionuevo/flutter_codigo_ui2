@@ -132,14 +132,24 @@ class HomePage extends StatelessWidget {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Row(
-                              children: List.generate(
-                                5,
-                                (index) => Icon(
-                                  Icons.star,
-                                  size: 20,
-                                  color: Color(0xffFEA92E),
+                              children: [
+                                ...List.generate(
+                                  4,
+                                      (index) => Icon(
+                                    Icons.star,
+                                    size: 20,
+                                    color: Color(0xffFEA92E),
+                                  ),
                                 ),
-                              ),
+                                ...List.generate(
+                                  5-4,
+                                      (index) => Icon(
+                                    Icons.star,
+                                    size: 20,
+                                    color: Colors.white.withOpacity(0.5),
+                                  ),
+                                ),
+                              ],
                             ),
                             Row(
                               children: [
