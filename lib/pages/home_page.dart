@@ -95,7 +95,8 @@ class HomePage extends StatelessWidget {
                   alignment: Alignment.bottomCenter,
                   child: Container(
                     width: double.infinity,
-                    padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 16.0),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 20.0, vertical: 16.0),
                     decoration: BoxDecoration(
                       color: Colors.white.withOpacity(0.6),
                       borderRadius: BorderRadius.only(
@@ -135,15 +136,15 @@ class HomePage extends StatelessWidget {
                               children: [
                                 ...List.generate(
                                   4,
-                                      (index) => Icon(
+                                  (index) => Icon(
                                     Icons.star,
                                     size: 20,
                                     color: Color(0xffFEA92E),
                                   ),
                                 ),
                                 ...List.generate(
-                                  5-4,
-                                      (index) => Icon(
+                                  5 - 4,
+                                  (index) => Icon(
                                     Icons.star,
                                     size: 20,
                                     color: Colors.white.withOpacity(0.5),
@@ -172,6 +173,33 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                   ),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Hot places",
+                      style: TextStyle(
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    Text(
+                      "SEE ALL",
+                      style: TextStyle(
+                        fontSize: 15.0,
+                        color: Color(0xff3E88E1),
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
