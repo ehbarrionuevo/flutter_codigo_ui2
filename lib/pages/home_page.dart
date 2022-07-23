@@ -210,12 +210,28 @@ class HomePage extends StatelessWidget {
                       height: 160,
                       width: 240,
                       decoration: BoxDecoration(
-                        color: Colors.red,
                         borderRadius: BorderRadius.circular(14.0),
                         image: DecorationImage(
                           fit: BoxFit.cover,
                           image: NetworkImage("https://world-traveled.com/wp-content/uploads/2021/01/219733347-kopie_1610117841-1040x690.jpg",),
                         ),
+                      ),
+                      child: Stack(
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(14.0),
+                              gradient: LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  Colors.transparent,
+                                  Color(0xff17467A).withOpacity(0.6),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
