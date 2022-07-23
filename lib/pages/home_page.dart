@@ -95,6 +95,7 @@ class HomePage extends StatelessWidget {
                   alignment: Alignment.bottomCenter,
                   child: Container(
                     width: double.infinity,
+                    padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 16.0),
                     decoration: BoxDecoration(
                       color: Colors.white.withOpacity(0.6),
                       borderRadius: BorderRadius.only(
@@ -104,24 +105,28 @@ class HomePage extends StatelessWidget {
                     ),
                     child: Row(
                       children: [
-                        Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Text(
-                              "Santorini, Greece",
-                              style: TextStyle(
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.bold,
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Text(
+                                "Santorini, Greece",
+                                style: TextStyle(
+                                  height: 1.1,
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
-                            ),
-                            Text(
-                              "Recommendation",
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                color: Colors.black54,
+                              Text(
+                                "Recommendation",
+                                style: TextStyle(
+                                  fontSize: 14.0,
+                                  color: Colors.black54,
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                         Column(
                           mainAxisSize: MainAxisSize.min,
@@ -135,6 +140,22 @@ class HomePage extends StatelessWidget {
                                   color: Color(0xffFEA92E),
                                 ),
                               ),
+                            ),
+                            Row(
+                              children: [
+                                const Text(
+                                  "4.3 ",
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                                Text(
+                                  "(2344 views)",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.normal,
+                                    color: Colors.black.withOpacity(0.7),
+                                    fontSize: 12.0,
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),
