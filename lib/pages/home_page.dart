@@ -23,10 +23,10 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-            child: SafeArea(
-              child: Stack(
-                children: [
-                  Padding(
+            child: Stack(
+              children: [
+                SafeArea(
+                  child: Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: Column(
                       children: [
@@ -66,9 +66,16 @@ class HomePage extends StatelessWidget {
                         ),
                         TextField(
                           decoration: InputDecoration(
+                            hintText: "Where are you going?",
+                            hintStyle: TextStyle(
+                                fontSize: 14.0,
+                                color: Colors.white.withOpacity(0.85)),
                             filled: true,
                             fillColor: Colors.white.withOpacity(0.45),
-                            prefixIcon: Icon(Icons.search, color: Colors.white,),
+                            prefixIcon: Icon(
+                              Icons.search,
+                              color: Colors.white,
+                            ),
                             contentPadding: EdgeInsets.symmetric(horizontal: 4),
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(8.0),
@@ -83,8 +90,28 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                   ),
-                ],
-              ),
+                ),
+
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Container(
+                    height: 100,
+                    width: double.infinity,
+                    color: Colors.red,
+                    child: Text("Hola"),
+                  ),
+                ),
+                // Positioned(
+                //   right: 0,
+                //   bottom: 0,
+                //   child: Container(
+                //     color: Colors.white,
+                //     child: Text(
+                //       "Holaaaaaaaa",
+                //     ),
+                //   ),
+                // ),
+              ],
             ),
           ),
         ],
