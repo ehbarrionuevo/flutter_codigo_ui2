@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_codigo_ui2/ui/widgets/item_category_widget.dart';
 import 'package:flutter_codigo_ui2/ui/widgets/item_slider_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -78,7 +79,8 @@ class HomePage extends StatelessWidget {
                                 Icons.search,
                                 color: Colors.white,
                               ),
-                              contentPadding: EdgeInsets.symmetric(horizontal: 4),
+                              contentPadding:
+                                  EdgeInsets.symmetric(horizontal: 4),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(8.0),
                                 borderSide: BorderSide.none,
@@ -97,8 +99,8 @@ class HomePage extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: double.infinity,
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 20.0, vertical: 16.0),
+                      padding: EdgeInsets.symmetric(
+                          horizontal: 20.0, vertical: 16.0),
                       decoration: BoxDecoration(
                         color: Colors.white.withOpacity(0.6),
                         borderRadius: BorderRadius.only(
@@ -158,7 +160,8 @@ class HomePage extends StatelessWidget {
                                 children: [
                                   const Text(
                                     "4.3 ",
-                                    style: TextStyle(fontWeight: FontWeight.bold),
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
                                   ),
                                   Text(
                                     "(2344 views)",
@@ -215,6 +218,45 @@ class HomePage extends StatelessWidget {
                         ItemSliderWidget(),
                         ItemSliderWidget(),
                         ItemSliderWidget(),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 14.0,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Categories",
+                        style: TextStyle(
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      Text(
+                        "SEE ALL",
+                        style: TextStyle(
+                          fontSize: 15.0,
+                          color: Color(0xff3E88E1),
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 14.0,
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        ItemCategoryWidget(),
+                        ItemCategoryWidget(),
+                        ItemCategoryWidget(),
+                        ItemCategoryWidget(),
+                        ItemCategoryWidget(),
+                        ItemCategoryWidget(),
                       ],
                     ),
                   ),
