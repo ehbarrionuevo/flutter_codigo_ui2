@@ -26,26 +26,42 @@ class HomePage extends StatelessWidget {
             child: SafeArea(
               child: Stack(
                 children: [
-                  Column(
-                    children: [
-                      Text(
-                        "Hi Elvis,",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 21.0,
-                          fontWeight: FontWeight.bold,
+                  Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              children: [
+                                Text(
+                                  "Hi Elvis,",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 21.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "Where do you want to go?",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 21.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Icon(
+                              Icons.notifications_none,
+                              color: Colors.white,
+                            ),
+                          ],
                         ),
-                      ),
-                      Text(
-                        "Where do you want to go?",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 21.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Icon(Icons.add,),
-                    ],
+                        TextField(),
+                      ],
+                    ),
                   ),
                 ],
               ),
