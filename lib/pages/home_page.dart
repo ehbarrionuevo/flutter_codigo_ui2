@@ -213,7 +213,9 @@ class HomePage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(14.0),
                         image: DecorationImage(
                           fit: BoxFit.cover,
-                          image: NetworkImage("https://world-traveled.com/wp-content/uploads/2021/01/219733347-kopie_1610117841-1040x690.jpg",),
+                          image: NetworkImage(
+                            "https://world-traveled.com/wp-content/uploads/2021/01/219733347-kopie_1610117841-1040x690.jpg",
+                          ),
                         ),
                       ),
                       child: Stack(
@@ -229,6 +231,34 @@ class HomePage extends StatelessWidget {
                                   Color(0xff17467A).withOpacity(0.6),
                                 ],
                               ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(14.0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Mount Fanjingshan",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 3.0,
+                                ),
+                                Text(
+                                  "4.4 (2323 views)",
+                                  style: TextStyle(
+                                    color: Colors.white70,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ],
