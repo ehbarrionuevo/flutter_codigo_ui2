@@ -91,11 +91,9 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ),
-
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: Container(
-                    height: 100,
                     width: double.infinity,
                     decoration: BoxDecoration(
                       color: Colors.white.withOpacity(0.6),
@@ -104,10 +102,46 @@ class HomePage extends StatelessWidget {
                         topLeft: Radius.circular(20.0),
                       ),
                     ),
-                    child: Text("Hola"),
+                    child: Row(
+                      children: [
+                        Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              "Santorini, Greece",
+                              style: TextStyle(
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              "Recommendation",
+                              style: TextStyle(
+                                fontSize: 14.0,
+                                color: Colors.black54,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Row(
+                              children: List.generate(
+                                5,
+                                (index) => Icon(
+                                  Icons.star,
+                                  size: 20,
+                                  color: Color(0xffFEA92E),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-
               ],
             ),
           ),
