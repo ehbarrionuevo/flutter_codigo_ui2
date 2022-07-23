@@ -31,9 +31,11 @@ class HomePage extends StatelessWidget {
                     child: Column(
                       children: [
                         Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
                                   "Hi Elvis,",
@@ -59,7 +61,25 @@ class HomePage extends StatelessWidget {
                             ),
                           ],
                         ),
-                        TextField(),
+                        const SizedBox(
+                          height: 14.0,
+                        ),
+                        TextField(
+                          decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Colors.white.withOpacity(0.45),
+                            prefixIcon: Icon(Icons.search, color: Colors.white,),
+                            contentPadding: EdgeInsets.symmetric(horizontal: 4),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(8.0),
+                              borderSide: BorderSide.none,
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(12.0),
+                              borderSide: BorderSide.none,
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
