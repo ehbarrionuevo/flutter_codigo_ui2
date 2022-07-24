@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-List places = [];
-
 List<Map<String, dynamic>> categories = [
   {
     "text": "Art & Culture",
@@ -19,3 +17,34 @@ List<Map<String, dynamic>> categories = [
     "icon": Icons.personal_injury_rounded,
   },
 ];
+
+List<Map<String, dynamic>> places = [
+  {
+    "image": "",
+    "name": "",
+    "rate": 5.0,
+    "views": 24343,
+  },
+  {
+    "image": "",
+    "name": "",
+    "rate": 5.0,
+    "views": 24343,
+  },
+  {
+    "image": "",
+    "name": "",
+    "rate": 5.0,
+    "views": 24343,
+  },
+  {
+    "image": "",
+    "name": "",
+    "rate": 5.0,
+    "views": 24343,
+  },
+
+];
+
+
+
