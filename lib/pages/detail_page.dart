@@ -24,12 +24,28 @@ class DetailPage extends StatelessWidget {
               children: [
                 Container(
                   decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(bottomRight: Radius.circular(46.0,),),
                     gradient: LinearGradient(
+                      begin: Alignment.bottomCenter,
+                      end: Alignment.topCenter,
                       colors: [
-                        Colors.red,
-                        Colors.blue,
+                        Color(0xff17467A).withOpacity(0.6),
+                        Colors.transparent,
                       ],
                     ),
+                  ),
+                ),
+                SafeArea(
+                  child: Column(
+                    children: [
+                      AppBar(
+                        backgroundColor: Colors.transparent,
+                        elevation: 0,
+                        actions: [
+                          IconButton(onPressed: (){}, icon: Icon(Icons.search,),),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
               ],
