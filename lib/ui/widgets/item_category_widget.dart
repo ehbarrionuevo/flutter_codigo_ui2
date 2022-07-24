@@ -1,26 +1,33 @@
-
 import 'package:flutter/material.dart';
 
 class ItemCategoryWidget extends StatelessWidget {
-  const ItemCategoryWidget({Key? key}) : super(key: key);
+  String text;
+  Color color;
+  IconData icon;
+
+  ItemCategoryWidget({
+    required this.text,
+    required this.color,
+    required this.icon,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(
-          horizontal: 16.0, vertical: 14.0),
+      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 14.0),
       margin: const EdgeInsets.only(right: 12.0),
       decoration: BoxDecoration(
-          color: Color(0xff5D6DFF),
-          borderRadius: BorderRadius.circular(10.0)),
+        color: color,
+        borderRadius: BorderRadius.circular(10.0),
+      ),
       child: Row(
         children: [
-          Icon(Icons.ac_unit, color: Colors.white),
+          Icon(icon, color: Colors.white),
           SizedBox(
             width: 6.0,
           ),
           Text(
-            "Art & Cultures",
+            text,
             style: TextStyle(
               color: Colors.white,
             ),

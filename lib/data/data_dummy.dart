@@ -1,12 +1,10 @@
-
 import 'package:flutter/material.dart';
 
 List places = [];
 
-
-List categories = [
+List<Map<String, dynamic>> categories = [
   {
-    "text": "Adventure",
+    "text": "Art & Culture",
     "color": Colors.red,
     "icon": Icons.add,
   },
@@ -16,12 +14,7 @@ List categories = [
     "icon": Icons.add,
   },
   {
-    "text": "Adventure",
-    "color": Colors.red,
-    "icon": Icons.add,
-  },
-  {
-    "text": "Adventure",
+    "text": "Festival",
     "color": Colors.red,
     "icon": Icons.add,
   },

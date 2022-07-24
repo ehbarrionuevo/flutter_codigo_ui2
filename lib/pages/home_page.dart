@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_codigo_ui2/data/data_dummy.dart';
 import 'package:flutter_codigo_ui2/ui/widgets/item_category_widget.dart';
 import 'package:flutter_codigo_ui2/ui/widgets/item_slider_widget.dart';
 
@@ -250,14 +251,24 @@ class HomePage extends StatelessWidget {
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
-                      children: [
-                        ItemCategoryWidget(),
-                        ItemCategoryWidget(),
-                        ItemCategoryWidget(),
-                        ItemCategoryWidget(),
-                        ItemCategoryWidget(),
-                        ItemCategoryWidget(),
-                      ],
+                      // children: List.generate(categories.length, (index) => ItemCategoryWidget()),
+                      // children: [
+                      //   ...List.generate(
+                      //     categories.length,
+                      //     (index) => ItemCategoryWidget(
+                      //       color: categories[index]["color"],
+                      //       text: categories[index]["text"],
+                      //       icon: categories[index]["icon"],
+                      //     ),
+                      //   ),
+                      // ],
+                      children: categories.map<Widget>(
+                        (Map<String, dynamic> e) => ItemCategoryWidget(
+                          text: e["text"],
+                          color: e["color"],
+                          icon: e["icon"],
+                        ),
+                      ).toList(),
                     ),
                   ),
                   const SizedBox(
