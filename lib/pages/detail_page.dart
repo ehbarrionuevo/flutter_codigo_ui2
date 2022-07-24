@@ -204,7 +204,7 @@ class DetailPage extends StatelessWidget {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: 22.0),
+              padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: 20.0),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(30.0),
