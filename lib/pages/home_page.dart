@@ -213,13 +213,7 @@ class HomePage extends StatelessWidget {
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
-                      children: [
-                        ItemSliderWidget(),
-                        ItemSliderWidget(),
-                        ItemSliderWidget(),
-                        ItemSliderWidget(),
-                        ItemSliderWidget(),
-                      ],
+                      children: places.map<Widget>((e) => ItemSliderWidget(placeMap: e,)).toList()
                     ),
                   ),
                   const SizedBox(
@@ -301,13 +295,7 @@ class HomePage extends StatelessWidget {
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
-                      children: [
-                        ItemSliderWidget(),
-                        ItemSliderWidget(),
-                        ItemSliderWidget(),
-                        ItemSliderWidget(),
-                        ItemSliderWidget(),
-                      ],
+                        children: places.map<Widget>((e) => ItemSliderWidget(placeMap: e,)).toList()
                     ),
                   ),
                   const SizedBox(

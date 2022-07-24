@@ -1,8 +1,12 @@
-
 import 'package:flutter/material.dart';
 
 class ItemSliderWidget extends StatelessWidget {
-  const ItemSliderWidget({Key? key}) : super(key: key);
+
+  Map<String, dynamic> placeMap;
+
+  ItemSliderWidget({
+    required this.placeMap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -14,9 +18,7 @@ class ItemSliderWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(14.0),
         image: DecorationImage(
           fit: BoxFit.cover,
-          image: NetworkImage(
-            "https://world-traveled.com/wp-content/uploads/2021/01/219733347-kopie_1610117841-1040x690.jpg",
-          ),
+          image: NetworkImage(placeMap["image"]),
         ),
       ),
       child: Stack(
@@ -41,7 +43,7 @@ class ItemSliderWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Mount Fanjingshan",
+                  placeMap["name"],
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
@@ -52,7 +54,7 @@ class ItemSliderWidget extends StatelessWidget {
                   height: 3.0,
                 ),
                 Text(
-                  "4.4 (2323 views)",
+                  "${placeMap["rate"]} (${placeMap["views"]} views)",
                   style: TextStyle(
                     color: Colors.white70,
                     fontSize: 14,
