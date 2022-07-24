@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class DetailPage extends StatelessWidget {
@@ -14,17 +13,26 @@ class DetailPage extends StatelessWidget {
             height: 400.0,
             decoration: BoxDecoration(
               color: Colors.red,
-              borderRadius: BorderRadius.only(bottomRight: Radius.circular(46.0,),),
+              borderRadius: BorderRadius.only(
+                bottomRight: Radius.circular(
+                  46.0,
+                ),
+              ),
               image: DecorationImage(
                 fit: BoxFit.cover,
-                image: NetworkImage("https://www.travelandleisure.com/thmb/ipVEI18VvgYxIlUl5yS0GgI7Pus=/650x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/belize-GOWHERE221121-776f36756ab34558a30ad6c05699e70a.jpg"),
+                image: NetworkImage(
+                    "https://www.travelandleisure.com/thmb/ipVEI18VvgYxIlUl5yS0GgI7Pus=/650x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/belize-GOWHERE221121-776f36756ab34558a30ad6c05699e70a.jpg"),
               ),
             ),
             child: Stack(
               children: [
                 Container(
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(bottomRight: Radius.circular(46.0,),),
+                    borderRadius: BorderRadius.only(
+                      bottomRight: Radius.circular(
+                        46.0,
+                      ),
+                    ),
                     gradient: LinearGradient(
                       begin: Alignment.bottomCenter,
                       end: Alignment.topCenter,
@@ -42,7 +50,47 @@ class DetailPage extends StatelessWidget {
                         backgroundColor: Colors.transparent,
                         elevation: 0,
                         actions: [
-                          IconButton(onPressed: (){}, icon: Icon(Icons.search,),),
+                          IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.search,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              Text(
+                                "Lorem ipsum dolor",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 22.0,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.location_on,
+                                    color: Colors.white70,
+                                  ),
+                                  SizedBox(
+                                    width: 6.0,
+                                  ),
+                                  Text(
+                                    "Lorem ipsum",
+                                    style: TextStyle(
+                                      color: Colors.white70,
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
                         ],
                       ),
                     ],
