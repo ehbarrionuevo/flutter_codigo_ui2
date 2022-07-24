@@ -264,9 +264,10 @@ class HomePage extends StatelessWidget {
                       // ],
                       children: categories.map<Widget>(
                         (Map<String, dynamic> e) => ItemCategoryWidget(
-                          text: e["text"],
-                          color: e["color"],
-                          icon: e["icon"],
+                          // text: e["text"],
+                          // color: e["color"],
+                          // icon: e["icon"],
+                          categoryMap: e,
                         ),
                       ).toList(),
                     ),
