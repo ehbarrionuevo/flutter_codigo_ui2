@@ -204,7 +204,7 @@ class DetailPage extends StatelessWidget {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              height: 100,
+              padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: 22.0),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(30.0),
@@ -221,6 +221,49 @@ class DetailPage extends StatelessWidget {
                     color: Colors.white,
                     blurRadius: 50,
                     offset: const Offset(0, -12),
+                  ),
+                ],
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      Text(
+                        "\$430",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 24.0,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        "(5 days)",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16.0,
+                          color: Colors.black54,
+                        ),
+                      ),
+                    ],
+                  ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xff2588EE),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                    ),
+                    onPressed: () {},
+                    child: Text(
+                      "Book now",
+                      style: TextStyle(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
                   ),
                 ],
               ),
