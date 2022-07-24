@@ -28,8 +28,7 @@ class DetailPage extends StatelessWidget {
                     ),
                     image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: NetworkImage(
-                          "https://www.travelandleisure.com/thmb/ipVEI18VvgYxIlUl5yS0GgI7Pus=/650x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/belize-GOWHERE221121-776f36756ab34558a30ad6c05699e70a.jpg"),
+                      image: NetworkImage(place["image"]),
                     ),
                   ),
                   child: Stack(
@@ -79,7 +78,7 @@ class DetailPage extends StatelessWidget {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        "Lorem ipsum dolor",
+                                        place["name"],
                                         style: TextStyle(
                                           color: Colors.white,
                                           fontSize: 22.0,
@@ -99,7 +98,7 @@ class DetailPage extends StatelessWidget {
                                             width: 6.0,
                                           ),
                                           Text(
-                                            "Lorem ipsum",
+                                            place["country"],
                                             style: TextStyle(
                                               color: Colors.white70,
                                               fontSize: 16.0,
@@ -142,11 +141,19 @@ class DetailPage extends StatelessWidget {
                       Row(
                         children: [
                           ...List.generate(
-                            5,
+                            place["rate"].toInt(),
                             (index) => Icon(
                               Icons.star,
                               size: 20,
                               color: Color(0xffFEA92E),
+                            ),
+                          ),
+                          ...List.generate(
+                                (5 - place["rate"].toInt()).toInt(),
+                                (index) => Icon(
+                              Icons.star,
+                              size: 20,
+                              color: Colors.black12,
                             ),
                           ),
                           const SizedBox(
@@ -155,14 +162,14 @@ class DetailPage extends StatelessWidget {
                           Row(
                             children: [
                               Text(
-                                "4.4 ",
+                                "${place["rate"]} ",
                                 style: TextStyle(
                                   fontSize: 16.0,
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
                               Text(
-                                "(2342 views)",
+                                "(${place["views"]} views)",
                                 style: TextStyle(
                                   fontSize: 13.0,
                                   fontWeight: FontWeight.w500,
@@ -187,7 +194,7 @@ class DetailPage extends StatelessWidget {
                         height: 10.0,
                       ),
                       Text(
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                        place["description"],
                         style: TextStyle(
                           height: 1.7,
                           fontSize: 14.0,
@@ -233,7 +240,7 @@ class DetailPage extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        "\$430",
+                        "\$${place["price"].toStringAsFixed(2)}",
                         style: TextStyle(
                           fontWeight: FontWeight.w600,
                           fontSize: 24.0,
@@ -243,7 +250,7 @@ class DetailPage extends StatelessWidget {
                         width: 10,
                       ),
                       Text(
-                        "(5 days)",
+                        "(${place["days"]} days)",
                         style: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 16.0,
