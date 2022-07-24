@@ -5,12 +5,15 @@ class DetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    double height = MediaQuery.of(context).size.height;
+
     return Scaffold(
       body: Column(
         children: [
           Container(
             width: double.infinity,
-            height: 400.0,
+            height: height * 0.62,
             decoration: BoxDecoration(
               color: Colors.red,
               borderRadius: BorderRadius.only(
