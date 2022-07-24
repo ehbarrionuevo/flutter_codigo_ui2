@@ -5,7 +5,6 @@ class DetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     double height = MediaQuery.of(context).size.height;
 
     return Scaffold(
@@ -63,7 +62,8 @@ class DetailPage extends StatelessWidget {
                         ],
                       ),
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: 24.0),
+                        padding: EdgeInsets.symmetric(
+                            horizontal: 24.0, vertical: 24.0),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -115,6 +115,43 @@ class DetailPage extends StatelessWidget {
                 ),
               ],
             ),
+          ),
+          Text(
+            "Overview",
+          ),
+          Row(
+            children: [
+              ...List.generate(
+                5,
+                (index) => Icon(
+                  Icons.star,
+                  size: 20,
+                  color: Color(0xffFEA92E),
+                ),
+              ),
+              const SizedBox(
+                width: 16.0,
+              ),
+              Row(
+                children: [
+                  Text(
+                    "4.4 ",
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  Text(
+                    "(2342 views)",
+                    style: TextStyle(
+                      fontSize: 13.0,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black54,
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
         ],
       ),
