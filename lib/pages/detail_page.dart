@@ -45,6 +45,7 @@ class DetailPage extends StatelessWidget {
                 ),
                 SafeArea(
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       AppBar(
                         backgroundColor: Colors.transparent,
@@ -58,40 +59,53 @@ class DetailPage extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Row(
-                        children: [
-                          Column(
-                            children: [
-                              Text(
-                                "Lorem ipsum dolor",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 22.0,
-                                  fontWeight: FontWeight.w600,
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: 24.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Lorem ipsum dolor",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 22.0,
+                                    fontWeight: FontWeight.w600,
+                                  ),
                                 ),
-                              ),
-                              Row(
-                                children: [
-                                  Icon(
-                                    Icons.location_on,
-                                    color: Colors.white70,
-                                  ),
-                                  SizedBox(
-                                    width: 6.0,
-                                  ),
-                                  Text(
-                                    "Lorem ipsum",
-                                    style: TextStyle(
+                                const SizedBox(
+                                  height: 3.0,
+                                ),
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons.location_on,
                                       color: Colors.white70,
-                                      fontSize: 16.0,
-                                      fontWeight: FontWeight.w500,
                                     ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ],
+                                    SizedBox(
+                                      width: 6.0,
+                                    ),
+                                    Text(
+                                      "Lorem ipsum",
+                                      style: TextStyle(
+                                        color: Colors.white70,
+                                        fontSize: 16.0,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            Icon(
+                              Icons.favorite_border_outlined,
+                              color: Colors.white70,
+                              size: 32.0,
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
