@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class DetailPage extends StatelessWidget {
-  const DetailPage({Key? key}) : super(key: key);
+
+  Map<String, dynamic> place;
+
+  DetailPage({required this.place});
 
   @override
   Widget build(BuildContext context) {

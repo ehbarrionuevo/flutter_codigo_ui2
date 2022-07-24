@@ -13,7 +13,7 @@ class ItemSliderWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context)=> DetailPage()));
+        Navigator.push(context, MaterialPageRoute(builder: (context)=> DetailPage(place: placeMap,)));
       },
       child: Container(
         height: 160,
